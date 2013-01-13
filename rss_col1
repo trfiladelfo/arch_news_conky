@@ -1,0 +1,68 @@
+# RSS News Conky by https://github.com/tr37ion
+
+#avoid flicker
+double_buffer yes
+
+#own window to run simultanious 2 or more conkys
+own_window yes
+own_window_transparent true
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Borders
+draw_borders no
+border_inner_margin 5
+
+# Contour around fonts
+draw_outline no
+
+# Shades
+draw_shades no
+default_shade_color 222222
+
+# Position
+gap_y -320
+gap_x 150
+
+# Alignment
+alignment middle_left
+# alignment botton_left
+
+# Interval
+update_interval 2
+
+# Colors
+default_color FFFFFF
+color1 1793D1
+color2 535353
+color3 FFFFFF
+color4 666666
+color5 115588
+
+# Font
+use_xft yes
+xftfont PF Tempesta Seven:pixelsize=8
+
+# Text alpha when using Xft
+#xftalpha 0.10
+
+# to prevent window from moving
+#use_spacer none
+minimum_size 400 300
+maximum_width 390
+default_bar_size 92 6
+
+#${color2}${font PF Tempesta Seven:size=6}${rss http://worldofgnome.org/feed/ 1 item_title 1}${font}
+#${color5}${font PF Tempesta Seven:size=5}${rss http://worldofgnome.org/feed/ 1 item_desc 1}${font}
+
+
+TEXT
+${color1}Lxer - News
+${color4}${rss http://lxer.com/module/newswire/headlines.rss 15 item_titles 6}
+
+${color1}Gulli - News
+${color4}${rss http://ticker.gulli.com/rss 15 item_titles 6}
+
+${color1}Golem - News
+${color4}${rss http://rss.golem.de/rss.php?feed=RSS1.0 15 item_titles 6}
+
